@@ -1,4 +1,4 @@
-# vue-electron
+# Specsie
 
 ## Project setup
 ```

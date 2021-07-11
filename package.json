@@ -1,7 +1,9 @@
 {
-  "name": "vue-electron",
+  "name": "specsie",
   "version": "0.1.0",
   "private": true,
+  "description": "A tool that will show you your system specifications",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
