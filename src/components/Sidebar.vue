@@ -2,14 +2,19 @@
   <div class="sidebar" id="sidebar">
     <h1 class="app-title">{{ appName }}</h1>
     <ul id="tabs">
-      <li><button v-on:click="select($event)" id="system"><HomeIcon class="icon" /><span>System</span></button></li>
+      <li><button v-on:click="select($event)" id="general"><HomeIcon class="icon" /><span>General</span></button></li>
+      <li><button v-on:click="select($event)" id="system"><DeviceTabletIcon class="icon" /><span>System</span></button></li>
+      <li><button v-on:click="select($event)" id="network"><GlobeAltIcon class="icon" /><span>Network</span></button></li>
       <hr class="divider">
-      <li><button v-on:click="select($event)" id="motherboard"><DeviceTabletIcon class="icon" /><span>Motherboard</span></button></li>
+      <li><button v-on:click="select($event)" id="motherboard"><QrcodeIcon class="icon" /><span>Motherboard</span></button></li>
       <li><button v-on:click="select($event)" id="processor"><ChipIcon class="icon" /><span>CPU</span></button></li>
       <li><button v-on:click="select($event)" id="memory"><TableIcon class="icon" /><span>RAM</span></button></li>
+      <li><button v-on:click="select($event)" id="graphics"><DesktopComputerIcon class="icon" /><span>Graphics</span></button></li>
       <li><button v-on:click="select($event)" id="storage"><FolderIcon class="icon" /><span>Storage</span></button></li>
-      <li><button v-on:click="select($event)" id="devices"><DesktopComputerIcon class="icon" /><span>Devices</span></button></li>
+      <li><button v-on:click="select($event)" id="devices"><ServerIcon class="icon" /><span>Devices</span></button></li>
+      <li><button v-on:click="select($event)" id="battery"><LightningBoltIcon class="icon" /><span>Battery</span></button></li>
       <hr class="divider">
+      <li><button v-on:click="select($event)" id="settings"><CogIcon class="icon" /><span>Settings</span></button></li>
       <li><button v-on:click="select($event)" id="about"><InformationCircleIcon class="icon" /><span>About</span></button></li>
       <li><button v-on:click="select($event)" id="support"><HeartIcon class="icon" /><span>Support</span></button></li>
     </ul>
@@ -18,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { ChipIcon, DesktopComputerIcon, DeviceTabletIcon, FolderIcon, HeartIcon, HomeIcon, InformationCircleIcon, TableIcon } from '@heroicons/vue/solid'
+import { ChipIcon, CogIcon, DesktopComputerIcon, DeviceTabletIcon, FolderIcon, GlobeAltIcon, HeartIcon, HomeIcon, InformationCircleIcon, LightningBoltIcon, QrcodeIcon, ServerIcon, TableIcon } from '@heroicons/vue/solid'
 
 export default defineComponent({
   name: 'Sidebar',
@@ -27,12 +32,17 @@ export default defineComponent({
   },
   components: {
     ChipIcon,
+    CogIcon,
     DesktopComputerIcon,
     DeviceTabletIcon,
     FolderIcon,
+    GlobeAltIcon,
     HeartIcon,
     HomeIcon,
     InformationCircleIcon,
+    LightningBoltIcon,
+    QrcodeIcon,
+    ServerIcon,
     TableIcon
   },
   data () {
@@ -102,8 +112,7 @@ export default defineComponent({
 
 .app-title {
   @apply text-center text-xl m-6 text-gray-400;
-  @apply md:text-2xl;
-  @apply lg:text-3xl;
+  @apply md:text-3xl;
 }
 
 .divider {
