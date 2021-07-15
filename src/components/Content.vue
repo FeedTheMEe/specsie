@@ -1,18 +1,18 @@
 <template>
   <div class="content">
     <div class="page" v-if="page === 'general'"><General /></div>
-    <div class="page" v-if="page === 'system'"><System /></div>
-    <div class="page" v-if="page === 'network'"><Network /></div>
-    <div class="page" v-if="page === 'motherboard'"><Motherboard /></div>
-    <div class="page" v-if="page === 'processor'"><Processor /></div>
-    <div class="page" v-if="page === 'memory'"><Memory /></div>
-    <div class="page" v-if="page === 'graphics'"><Graphics /></div>
-    <div class="page" v-if="page === 'storage'"><Storage /></div>
-    <div class="page" v-if="page === 'devices'"><Devices /></div>
-    <div class="page" v-if="page === 'battery'"><Battery /></div>
-    <div class="page" v-if="page === 'settings'"><Settings /></div>
-    <div class="page" v-if="page === 'about'"><About /></div>
-    <div class="page" v-if="page === 'support'"><Support /></div>
+    <div class="page" v-else-if="page === 'system'"><System /></div>
+    <div class="page" v-else-if="page === 'network'"><Network /></div>
+    <div class="page" v-else-if="page === 'motherboard'"><Motherboard /></div>
+    <div class="page" v-else-if="page === 'processor'"><Processor /></div>
+    <div class="page" v-else-if="page === 'memory'"><Memory /></div>
+    <div class="page" v-else-if="page === 'graphics'"><Graphics /></div>
+    <div class="page" v-else-if="page === 'storage'"><Storage /></div>
+    <div class="page" v-else-if="page === 'devices'"><Devices /></div>
+    <div class="page" v-else-if="page === 'battery'"><Battery /></div>
+    <div class="page" v-else-if="page === 'settings'"><Settings /></div>
+    <div class="page" v-else-if="page === 'about'"><About /></div>
+    <div class="page" v-else-if="page === 'support'"><Support /></div>
   </div>
 </template>
 
@@ -63,7 +63,7 @@ export default defineComponent({
 }
 
 .content .page {
-  @apply ml-16 mt-12 h-full w-8/12 overflow-y-auto;
+  @apply pl-16 pt-12 h-full w-8/12 overflow-y-auto;
 }
 </style>
 
@@ -77,6 +77,34 @@ export default defineComponent({
 }
 
 .info-box {
-  @apply bg-orange-100;
+  @apply text-gray-500;
+}
+
+.info-box ul hr {
+  @apply w-9/12 ml-4 mt-16 mb-6;
+}
+
+.info-box li h3 {
+  @apply text-2xl text-gray-600;
+}
+
+/* .basic-1 {
+  background:
+      linear-gradient(currentColor 0 0)
+      0 100% /var(--d, 0) 3px
+    no-repeat;
+  transition:0.5s;
+}
+
+.basic-1:hover {
+  --d: 100%;
+} */
+
+.info-box .list {
+  @apply mt-4 mb-8 text-xl;
+}
+
+.info-box .list li {
+  @apply ml-8;
 }
 </style>

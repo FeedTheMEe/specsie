@@ -19,7 +19,7 @@ export default defineComponent({
   data () {
     return {
       appName: 'Specsie',
-      page: 'system'
+      page: 'general'
     }
   },
   methods: {

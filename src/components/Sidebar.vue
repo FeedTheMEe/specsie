@@ -2,21 +2,21 @@
   <div class="sidebar" id="sidebar">
     <h1 class="app-title">{{ appName }}</h1>
     <ul id="tabs">
-      <li><button v-on:click="select($event)" id="general"><HomeIcon class="icon" /><span>General</span></button></li>
-      <li><button v-on:click="select($event)" id="system"><DeviceTabletIcon class="icon" /><span>System</span></button></li>
-      <li><button v-on:click="select($event)" id="network"><GlobeAltIcon class="icon" /><span>Network</span></button></li>
+      <li><button @click="select($event)" id="general"><HomeIcon class="icon" /><span>General</span></button></li>
+      <li><button @click="select($event)" id="system"><DeviceTabletIcon class="icon" /><span>System</span></button></li>
+      <li><button @click="select($event)" id="network"><GlobeAltIcon class="icon" /><span>Network</span></button></li>
       <hr class="divider">
-      <li><button v-on:click="select($event)" id="motherboard"><QrcodeIcon class="icon" /><span>Motherboard</span></button></li>
-      <li><button v-on:click="select($event)" id="processor"><ChipIcon class="icon" /><span>CPU</span></button></li>
-      <li><button v-on:click="select($event)" id="memory"><TableIcon class="icon" /><span>RAM</span></button></li>
-      <li><button v-on:click="select($event)" id="graphics"><DesktopComputerIcon class="icon" /><span>Graphics</span></button></li>
-      <li><button v-on:click="select($event)" id="storage"><FolderIcon class="icon" /><span>Storage</span></button></li>
-      <li><button v-on:click="select($event)" id="devices"><ServerIcon class="icon" /><span>Devices</span></button></li>
-      <li><button v-on:click="select($event)" id="battery"><LightningBoltIcon class="icon" /><span>Battery</span></button></li>
+      <li><button @click="select($event)" id="motherboard"><QrcodeIcon class="icon" /><span>Motherboard</span></button></li>
+      <li><button @click="select($event)" id="processor"><ChipIcon class="icon" /><span>CPU</span></button></li>
+      <li><button @click="select($event)" id="memory"><TableIcon class="icon" /><span>RAM</span></button></li>
+      <li><button @click="select($event)" id="graphics"><DesktopComputerIcon class="icon" /><span>Graphics</span></button></li>
+      <li><button @click="select($event)" id="storage"><FolderIcon class="icon" /><span>Storage</span></button></li>
+      <li><button @click="select($event)" id="devices"><ServerIcon class="icon" /><span>Devices</span></button></li>
+      <li><button @click="select($event)" id="battery"><LightningBoltIcon class="icon" /><span>Battery</span></button></li>
       <hr class="divider">
-      <li><button v-on:click="select($event)" id="settings"><CogIcon class="icon" /><span>Settings</span></button></li>
-      <li><button v-on:click="select($event)" id="about"><InformationCircleIcon class="icon" /><span>About</span></button></li>
-      <li><button v-on:click="select($event)" id="support"><HeartIcon class="icon" /><span>Support</span></button></li>
+      <li><button @click="select($event)" id="settings"><CogIcon class="icon" /><span>Settings</span></button></li>
+      <li><button @click="select($event)" id="about"><InformationCircleIcon class="icon" /><span>About</span></button></li>
+      <li><button @click="select($event)" id="support"><HeartIcon class="icon" /><span>Support</span></button></li>
     </ul>
   </div>
 </template>
