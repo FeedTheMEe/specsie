@@ -26,27 +26,13 @@
 
 <script>
 import { defineComponent } from 'vue'
-import systeminformation from 'systeminformation'
 
 export default defineComponent({
   name: 'General',
-  mounted () {
-    this.getData()
-  },
   data () {
     return {
       os: '',
       distro: ''
-    }
-  },
-  methods: {
-    getData: function () {
-      console.log('test 1') // Gets printed out
-      systeminformation.cpu()
-        .then(data => console.log(data)) // All of these do nothing
-        .catch(reason => console.log(reason))
-        .finally(() => console.log('test 1.5'))
-      console.log('test 2') // Gets printed out
     }
   }
 })

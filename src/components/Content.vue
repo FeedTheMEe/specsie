@@ -56,18 +56,16 @@ export default defineComponent({
 })
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .content {
-  @apply ml-32 h-full w-full overflow-y-auto fixed;
+  @apply ml-32 h-full w-full overflow-y-auto relative;
   @apply md:ml-72;
 }
 
 .content .page {
-  @apply pl-16 pt-12 h-full w-8/12 overflow-y-auto;
+  @apply pl-16 pt-12 h-full w-full overflow-y-auto;
 }
-</style>
 
-<style lang="postcss">
 .page h1 {
   @apply text-3xl;
 }

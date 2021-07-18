@@ -1,7 +1,10 @@
 <template>
-  <div class="app">
+  <div class="app" v-if="isLoaded">
     <Sidebar :appName="appName" @sendTabId="changePage"/>
     <Content :page="page"/>
+  </div>
+  <div v-else>
+    <h1>Loading...</h1>
   </div>
 </template>
 
@@ -9,6 +12,11 @@
 import { defineComponent } from 'vue'
 import Sidebar from './components/Sidebar.vue'
 import Content from './components/Content.vue'
+import { LOAD_DATA, IS_DATA_LOADED } from './channels'
+
+declare global {
+  interface Window { api: any }
+}
 
 export default defineComponent({
   name: 'App',
@@ -16,9 +24,19 @@ export default defineComponent({
     Sidebar,
     Content
   },
+  mounted () {
+    window.api.send(LOAD_DATA, '')
+
+    window.api.receive(IS_DATA_LOADED, (data: any) => {
+      console.log('received')
+      this.isLoaded = data
+      console.log(this.isLoaded)
+    })
+  },
   data () {
     return {
       appName: 'Specsie',
+      isLoaded: false,
       page: 'general'
     }
   },
